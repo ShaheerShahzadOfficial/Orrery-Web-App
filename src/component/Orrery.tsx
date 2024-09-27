@@ -26,7 +26,7 @@ export default function Orrery() {
             enablePan={true}
             enableZoom={true}
             enableRotate={true}
-            target={selectedBody || new THREE.Vector3(0, 0, 0)} // Focus on the selected body
+            target={selectedBody || new THREE.Vector3(0, 0, 0)}
           />
         </Suspense>
       </Canvas>
