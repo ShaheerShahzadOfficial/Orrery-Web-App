@@ -1,4 +1,3 @@
-import React from "react";
 import { CelestialBody } from "./CelestialBody.tsx";
 
 const planets = [

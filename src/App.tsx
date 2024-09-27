@@ -1,4 +1,3 @@
-import React from 'react'
 import Orrery from './component/Orrery'
 import './App.css';
 

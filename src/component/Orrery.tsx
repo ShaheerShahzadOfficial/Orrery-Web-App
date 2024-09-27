@@ -1,5 +1,5 @@
-import React, { Suspense, useState, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Suspense, useState, useRef } from 'react'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { SolarSystem } from './SolarSystem'
 import { NEOCloud } from './NEOCloud'
