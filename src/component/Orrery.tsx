@@ -6,25 +6,6 @@ import { NEOCloud } from './NEOCloud'
 import * as THREE from 'three'
 
 
-const InfiniteStars = () => {
-  const starFieldRef = useRef(null);
-
-  // Function to reset star positions based on camera movement
-  useFrame(({ camera }) => {
-    const { position } = camera;
-
-    // Logic to reposition stars when they move beyond a certain depth
-    if (starFieldRef.current) {
-      starFieldRef.current.position.z = -Math.floor(position.z / 100) * 100; // Adjust this value as needed
-    }
-  });
-
-  return (
-    <group ref={starFieldRef}>
-      <Stars radius={300} depth={60} count={20000} factor={7} saturation={0} fade />
-    </group>
-  );
-};
 
 
 export default function Orrery() {
