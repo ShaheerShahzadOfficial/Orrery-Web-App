@@ -3,17 +3,15 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import { SolarSystem } from './SolarSystem'
 import { NEOCloud } from './NEOCloud'
+import { ColorKey } from './ColorKey'
 import * as THREE from 'three'
-
-
-
 
 export default function Orrery() {
   const controlsRef = useRef(null)
   const [selectedBody, setSelectedBody] = useState<THREE.Vector3 | null>(null)
 
   return (
-    <div className="w-full h-screen bg-black">
+    <div className="w-full h-screen bg-black relative">
       <Canvas camera={{ position: [0, 50, 100], fov: 60 }}>
         <Suspense fallback={null}>
           <ambientLight intensity={0.1} />
@@ -30,6 +28,7 @@ export default function Orrery() {
           />
         </Suspense>
       </Canvas>
+      <ColorKey />
     </div>
   )
 }
